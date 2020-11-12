@@ -1,7 +1,11 @@
 const http = require("http");
 const express = require("express");
 const connection = require("./conn");
+var cors = require('cors');
+
 const app = express();
+
+app.use(cors());
 
 app.get("/flavorsByName", function(req, res) {
     connection.readData(req, res);    
