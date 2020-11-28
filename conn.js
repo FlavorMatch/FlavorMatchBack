@@ -3,10 +3,10 @@ const mysql = require('mysql');
 require ('dotenv'). config ();
 
 const con = mysql.createConnection({
-    host: 'localhost', 
+    host: process.env.DB_HOST, 
     user: process.env.DB_USER,  
     password: process.env.DB_PASS, 
-    database: 'flavor_match' 
+    database: process.env.DB_DATA 
 });
 
 exports.readData = (req, res) => {
