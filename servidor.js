@@ -15,4 +15,9 @@ app.get("/matchById", function(req, res) {
     connection.readList(req, res);    
 });
 
-http.createServer(app).listen(5000, () => console.log("Servidor rodando local na porta 5000"));
+var port = process.env.PORT || 3000;
+
+
+http.createServer(app).listen (port, "0.0.0.0", function () {
+    console.log ("Ouvindo na Porta 3000");
+});
