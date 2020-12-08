@@ -19,5 +19,5 @@ var port = process.env.PORT || 3000;
 
 
 http.createServer(app).listen (port, "0.0.0.0", function () {
-    console.log ("Ouvindo na Porta 3000");
+    console.log ("Port 3000");
 });
